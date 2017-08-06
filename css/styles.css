@@ -313,19 +313,19 @@ menuitem a:focus{
   -ms-transform: translate(-50%, -50%)
 }
 .tourism{
-	background: url("../images/casa.jpg") no-repeat center center; 
+	background: url("../images/turismo.jpg") no-repeat center center; 
 }
 .spa{
-	background: url("../images/atardecer.jpg") no-repeat center center; 
+	background: url("../images/spa.jpg") no-repeat center center; 
 }
 .restaurant{
-	background: url("../images/laguna.jpg") no-repeat center center; 
+	background: url("../images/restaurante.jpg") no-repeat center center; 
 }
 .events{
 	background: url("../images/eventos.jpg") no-repeat center center; 
 }
 .rooms{
-	background: url("../images/montana.jpg") no-repeat center center; 
+	background: url("../images/habitaciones.jpg") no-repeat center center; 
 }
 .tourism,
 .spa,
@@ -484,7 +484,7 @@ footer a:hover{
 #reservas{
 	width:100%;
 	height: 500px;
-	background: url("../images/rio.jpg") no-repeat center center; 
+	background: url("../images/riohuallaga.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
