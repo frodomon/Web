@@ -529,6 +529,7 @@ footer a:hover{
 	padding: 2rem;
 	background-color: #49311C;
 	text-align: center;
+	text-transform: uppercase;
 }
 .servicio-button a{
 	color:white;
@@ -718,24 +719,66 @@ footer a:hover{
 }
 .about-top{
 	height: auto;
-	background-color: #FFFFFF;
-	padding: 2rem 10%;
 }
-.mission,
-.vision{
+.hotel{
+	--margen: 0.75rem;
+	--ancho: calc(60% - (var(--margen)));
+	width: var(--ancho);
+	height: 600px;
+	background-color: #FFFFFF;
+	float: left;
+	padding: 2rem 5%;
+	margin-right: 0.75rem;
+	background: url("../images/hotel.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.nosotros{
+	--margen: 0.75rem;
+	--ancho: calc(40% - (var(--margen)));
+	width: var(--ancho);
+	height:600px;
+	background-color: #FFFFFF;
+	float: left;
+	padding: 2rem 5%;
+	margin-left: 0.75rem;
+}
+.mission-vission,
+.recepcion{
 	--margen: 0.75rem;
 	--ancho: calc(50% - (var(--margen)));
 	width: var(--ancho);
 	height:400px;
-	background-color: #FFFFFF;
 	float: left;
-	padding: 2rem 5%;
 }
-.mission{
+.mission-vission{
 	margin-right: 0.75rem;
 }
-.vision{
+.recepcion{
 	margin-left: 0.75rem;
+	background-color: #FFFFFF;
+	--margen: 1.5rem;
+	--alto: calc(400px + (var(--margen)));
+	--margenn: 0.75rem;
+	--ancho: calc(50% - (var(--margenn)));
+	width: var(--ancho);
+	height: var(--alto);
+	background: url("../images/recepcion.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.mission,
+.vision{
+	width:100%;
+	height:200px;
+	margin-bottom: 1.5rem;
+	padding: 2rem 5%;
+	background-color: #FFFFFF;
+	text-align: center;
 }
 .about-contact{
 	--margen: 0.75rem;
@@ -885,7 +928,7 @@ footer a:hover{
 }
 .room-thumb{
 	--margen: 0.75rem;
-	--ancho: calc(50% - (var(--margen)));
+	--ancho: calc(60% - (var(--margen)));
 	width: var(--ancho);
 	float:left;
 	margin-right: 0.75rem;
@@ -896,7 +939,7 @@ footer a:hover{
 }
 .room-description{
 	--margen: 0.75rem;
-	--ancho: calc(50% - (var(--margen)));
+	--ancho: calc(40% - (var(--margen)));
 	width: var(--ancho);
 	float:left;
 	margin-left: 0.75rem;
@@ -916,4 +959,35 @@ footer a:hover{
 .common-areas img{
 	width:100%;
 	display:block;
+}
+/*----------------------EVENTO---------------*/
+#eventos{
+	width:100%;
+	padding: 3rem 10%;
+	background-color: #EFEFEF;
+}
+.polivalente{
+	--margen: 0.75rem;
+	--ancho: calc(60% - (var(--margen)));
+	width: var(--ancho);
+	float:left;
+	margin-right: 0.75rem;
+	background-color: #FFFFFF;
+	background: url("../images/eventos.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:500px;
+}
+.evento-desc{
+	--margen: 0.75rem;
+	--ancho: calc(40% - (var(--margen)));
+	width: var(--ancho);
+	float:left;
+	margin-left: 0.75rem;
+	height:500px;
+	margin-bottom: 1.5rem;
+	padding: 2rem 5%;
+	background-color: #FFFFFF;
 }
