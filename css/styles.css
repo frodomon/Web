@@ -937,28 +937,60 @@ footer a:hover{
 	width:100%;
 	display:block;
 }
-.room-description{
+.room-content{
 	--margen: 0.75rem;
 	--ancho: calc(40% - (var(--margen)));
 	width: var(--ancho);
 	float:left;
 	margin-left: 0.75rem;
 }
+.list-room-services{
+	width:100%;
+	padding-bottom: 0.5rem;
+}
+.room-description,
 .room-services{
 	width:100%;
-	padding-bottom: 2rem;
+	padding-bottom: 1rem;
 }
-.room-services img{
-	width:100%;
+.icon-room-service,
+.text-room-service{
+	float:left;
+	padding-left: 1rem;
+}
+.icon-room-service{
+	height:2rem;
 	display:block;
 }
 .common-areas{
 	width:100%;
 	padding-bottom: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
-.common-areas img{
+.common-area{
+	width: 30%;
+	padding-bottom: 1.5rem;
+}
+.common-area-thumb{
+	width:100%;
+	max-height:350px;
+}
+.common-area-thumb img{
 	width:100%;
 	display:block;
+}
+.common-area-button{
+	width:100%;
+	padding: 1.5rem;
+	background-color: #49311C;
+	text-align: center;
+	text-transform: uppercase;
+}
+.common-area-button p{
+	color:white;
 }
 /*----------------------EVENTO---------------*/
 #eventos{
