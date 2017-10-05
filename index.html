@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="css/ie.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery.flexslider-min.js"></script>
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -20,16 +22,14 @@
 	<header>
 		<div class='top-header'>
 			<div class="row no-margin">
-				<div class="top-left col-xl-4 col-lg-4 col-md-4 col-12">
+				<div class="top-left col-xl-4 col-lg-4 col-md-4 col-12 hide-responsive">
 				</div>
 				<div class="header-logo col-xl-4 col-lg-4 col-md-4 col-12">
 					<a href="index.html"><img id="logo-header" src="images/logo horizontal.png"></a>
 				</div>
 				<div class="social col-xl-4 col-lg-4 col-md-4 col-12">
-					<a href="#" target="_blank"><i class="fa fa-facebook-square fa-2x sn_icons" aria-hidden="true"></i></a>
-						<a href="#" target="_blank"><i class="fa fa-instagram fa-2x sn_icons" aria-hidden="true"></i></a>
-						<a href="#" target="_blank"><i class="fa fa-twitter fa-2x sn_icons" aria-hidden="true"></i></a>
-						<a href="#" target="_blank"><i class="fa fa-tripadvisor  fa-2x sn_icons" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com/HotelRioHuallagaOficial" target="_blank"><i class="fa fa-facebook-square fa-2x sn_icons" aria-hidden="true"></i></a>
+					<a href="#" target="_blank"><i class="fa fa-tripadvisor  fa-2x sn_icons" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</div>
@@ -39,12 +39,17 @@
 			<menuitem><a href="spa.html">Spa</a></menuitem>
 			<menuitem><a href="restaurant.html">Restaurante</a></menuitem>
 			<menuitem><a href="events.html">Eventos</a></menuitem>
-			<menuitem><a href="turismo.html">Paquetes Turisticos</a></menuitem>
+			<menuitem><a href="turismo.html">Tours</a></menuitem>
 			<menuitem><a href="contact.html">Contacto</a></menuitem>
-		</nav>
+		</menu>
 	</header>
 	<section id="main">
-		<div class="reservas">
+		<ul class="slides">
+      <li class="slide" style="background:url('images/home.jpg') no-repeat center center; background-size:cover;"></li>
+      <li class="slide" style="background:url('images/turismo.jpg') no-repeat center center; background-size:cover;"></li>
+      <li class="slide" style="background:url('images/pacaya samiria 07.jpg') no-repeat center center; background-size:cover;"></li>
+    </ul>
+		<div class="reservas reservas2">
 			<h4 class="reservas-title">Reservas</h4>
 			<div class="reserva-line group">
 				<div class="reserva-left">
@@ -74,11 +79,11 @@
 	<section id="services">
 		<div class="row no-margin">
 			<div class="no-padding col-xl-4 col-lg-4 col-md-4 col-12">
-				<a href="turismo.html">
-					<div class="line tourism">
-						<div class="turismo">
+				<a href="rooms.html">
+					<div class="line events">
+						<div class="eventos">
 						</div>
-						<div class="service-title">TURISMO</div>
+						<div class="service-title">EVENTOS</div>
 					</div>
 				</a>
 				<a href="spa.html">
@@ -100,18 +105,18 @@
 				</div>
 		</div>
 		<div class="row no-margin">
-			<div class="no-padding col-xl-8 col-lg-8 col-md-8 col-12">
-				<a href="rooms.html">
-					<div class="line events">
-						<div class="eventos">
+			<div class="no-padding col-xl-6 col-lg-6 col-md-6 col-12">
+				<a href="turismo.html">
+					<div class="doubleline tourism">
+						<div class="turismo">
 						</div>
-						<div class="service-title">EVENTOS</div>
+						<div class="service-title">TURISMO</div>
 					</div>
 				</a>
 			</div>
-			<div class="no-padding col-xl-4 col-lg-4 col-md-4 col-12">
+			<div class="no-padding col-xl-6 col-lg-6 col-md-6 col-12">
 				<a href="rooms.html">
-					<div class="line rooms">
+					<div class="doubleline rooms">
 						<div class="habitaciones">
 						</div>
 						<div class="service-title">HABITACIONES</div>
@@ -129,37 +134,26 @@
 			</div>
 			<div class="footer-top-center col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
 				<div class='footer-address group'>
-					<div class='footer-icon'>
-						<i class="fa fa-map-marker" aria-hidden="true"></i>
-					</div>
 					<div class='footer-content'>
-						<p>Calle Arica Nro. 111</p>
+						<p><i class="fa fa-map-marker" aria-hidden="true"></i>   Calle Arica Nro. 111</p>
 						<p>Yurimaguas</p>
 						<p>Loreto, Perú</p>
 					</div>
 				</div>
 				<div class="footer-phone group">
-					<div class='footer-icon'>
-						<i class="fa fa-phone" aria-hidden="true"></i>
-					</div>
 					<div class='footer-content'>
-						<p><a href="tel:065353951">(065) 353951</a></p>
+						<p><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:065353951">  (065) 353951</a></p>
 					</div>
 				</div>
 				<div class="footer-mobile group">
-					<div class='footer-icon'>
-						<i class="fa fa-mobile" aria-hidden="true"></i>
-					</div>
+
 					<div class='footer-content'>
-						<p><a href="tel:1234567">1234567</a></p>
+						<p><i class="fa fa-mobile" aria-hidden="true"></i><a href="tel:1234567">  1234567</a></p>
 					</div>
 				</div>
 				<div class="footer-email group">
-					<div class='footer-icon'>
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-					</div>
 					<div class='footer-content'>
-						<p><a href='mailto:hotelriohuallaga@hotmail.com'>hotelriohuallaga@hotmail.com</a></p>
+						<p><i class="fa fa-envelope" aria-hidden="true"></i><a href='mailto:hotelriohuallaga@hotmail.com'>  hotelriohuallaga@hotmail.com</a></p>
 					</div>
 				</div>
 			</div>
@@ -185,5 +179,20 @@
 			</div>	
 	</footer>
   <script src="js/scripts.js"></script>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+  $(window).ready(function(){
+    $('#main').flexslider({
+      animation: "fade",
+      animationLoop: true,
+      slideshow: true,
+      slideshowSpeed: 7000,
+      randomize:false,
+      prevText:"",
+      nextText:""
+    });
+  });
+</script>
 </body>
 </html>

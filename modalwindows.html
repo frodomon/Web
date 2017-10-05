@@ -1,0 +1,13 @@
+<div id="openModal" class="modalDialog">
+   <div>
+   		<a href="#" title="Close" class="closeModal">X</a>
+      <a href="http://www.killaryperu.com/moon-of-arequipa/"><img src="<?php echo get_template_directory_uri().'/images/Killary_Home.png'; ?>" alt="Luna Arequipeña"></a>
+   </div>
+</div>
+<script type="text/javascript">
+  $(window).ready(function(){
+		$('#openModal .closeModal').on('click', function(){
+    	$('#openModal').hide();
+    });
+  });
+</script>

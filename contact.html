@@ -7,6 +7,7 @@
   <meta name="author" content="Ukuku">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/ie.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -23,13 +24,11 @@
 				<div class="top-left col-xl-4 col-lg-4 col-md-4 col-12">
 				</div>
 				<div class="header-logo col-xl-4 col-lg-4 col-md-4 col-12">
-					<a href="index.html"><img id="logo-header" src="images/logo.png"></a>
+					<a href="index.html"><img id="logo-header" src="images/logo horizontal.png"></a>
 				</div>
 				<div class="social col-xl-4 col-lg-4 col-md-4 col-12">
-					<a href="#" target="_blank"><i class="fa fa-facebook-square fa-2x sn_icons" aria-hidden="true"></i></a>
-						<a href="#" target="_blank"><i class="fa fa-instagram fa-2x sn_icons" aria-hidden="true"></i></a>
-						<a href="#" target="_blank"><i class="fa fa-twitter fa-2x sn_icons" aria-hidden="true"></i></a>
-						<a href="#" target="_blank"><i class="fa fa-tripadvisor  fa-2x sn_icons" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com/HotelRioHuallagaOficial" target="_blank"><i class="fa fa-facebook-square fa-2x sn_icons" aria-hidden="true"></i></a>
+					<a href="https://www.tripadvisor.com.pe/Hotel_Review-g3396866-d3824394-Reviews-Hotel_Rio_Huallaga-Yurimaguas_Loreto_Region.html" target="_blank"><i class="fa fa-tripadvisor  fa-2x sn_icons" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</div>
@@ -43,34 +42,6 @@
 			<menuitem><a href="contact.html">Contacto</a></menuitem>
 		</nav>
 	</header>
-	<section id="reservas">
-		<div class="reservas">
-			<h4 class="reservas-title">Reservas</h4>
-			<div class="reserva-line group">
-				<div class="reserva-left">
-					<label class="lbl-reserva">Entrada</label>
-					<input class="reserva-input" type="date">
-				</div>
-				<div class="reserva-right">
-					<label class="lbl-reserva">Salida</label>
-					<input class="reserva-input" type="date">
-				</div>
-			</div>
-			<div class="reserva-line group">
-				<div class="reserva-left">
-					<label class="lbl-reserva">Habitaciones</label>
-					<input class="reserva-input" type="number" min="0">
-				</div>
-				<div class="reserva-right">
-					<label class="lbl-reserva">Huespedes</label>
-					<input class="reserva-input" type="number" min="0">
-				</div>
-			</div>
-			<div class="reserva-line group">
-				<input class="submit-reserva" type="submit" value="Realiza la Reserva">
-			</div>		
-		</div>
-	</section>
 	<section id="contact_us">
 	<div class='contact-top'>
 		<h1 class='page-title'>Contacto</h1>
@@ -111,20 +82,22 @@
 		<div class='contact-form'>
 			<p class="padding-abajo negrita"><i class="fa fa-envelope" aria-hidden="true"></i> Escríbenos:</p>
 			<p class="padding-abajo no-margin negrita">Para cualquier consulta que tengas, no dudes en dejarnos un mensaje. Nosotros responderemos en un plazo máximo de 12 horas.</p>
-			<div class="cf-line group">
-				<div class="cf-inline">
-					<input type="email" placeholder="Correo electrónico">
+			<form id="contact">
+				<div class="cf-line group">
+					<div class="cf-inline">
+						<input id="email" type="email" placeholder="Correo electrónico" required >
+					</div>
+					<div class="cf-inline">
+						<input id="name" type="text" placeholder="Nombre" required >
+					</div>
 				</div>
-				<div class="cf-inline">
-					<input type="text" placeholder="Nombre">
-				</div>
-			</div>
-			<div class="cf-text">
-				<textarea placeholder="Mensaje"></textarea>
-			</div>		
-			<div class="cf-button">
-				<input type="submit" value="Enviar">
-			</div>		
+				<div class="cf-text">
+					<textarea id="message" placeholder="Mensaje" required></textarea>
+				</div>		
+				<div class="cf-button">
+					<input type="submit" id="contact-submit" value="Enviar">
+				</div>	
+			</form>	
 		</div>
 	</div>
 	</section>
@@ -192,6 +165,38 @@
 				</div>		
 			</div>	
 	</footer>
-  <script src="js/scripts.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCgmMOtx3cBrjV1ZToluAJJ-QOaKpdbutg",
+	    authDomain: "contact-form-hotel.firebaseapp.com",
+	    databaseURL: "https://contact-form-hotel.firebaseio.com",
+	    projectId: "contact-form-hotel",
+	    storageBucket: "contact-form-hotel.appspot.com",
+	    messagingSenderId: "11510702982"
+	  };
+	  firebase.initializeApp(config);
+	  var messagesRef = firebase.database().ref('messages');
+
+	  $("#contact-submit").on('click', function(e) {
+			e.preventDefault();
+			var name = $("#name").val();
+			var email = $("#email").val();
+			var message = $("#message").val();
+			saveMessage(name, email, message);
+		  // Clear form
+		  $('#contact')[0].reset();
+		});
+		function saveMessage(name, email, message){
+			var newMessageRef = messagesRef.push();
+			newMessageRef.set({
+				name: name,
+				email: email,
+				message: message
+			});
+		}
+	</script>
 </body>
 </html>

@@ -15,6 +15,8 @@ body {
   width: 100%;
   height: 100%;
   font-family: 'cuprum', sans-serif;
+  margin:0;
+  padding:0;
 }
 a{
 	font-weight: bold;
@@ -184,7 +186,81 @@ header{
 	width:100%;
 	height:160px;
 	background-color: #FFFFFF;
+  position:fixed;
+  z-index:1000;
+  top:0px;
+  left:0px;
+  right:0px;
 }
+/*-------------------HEADER ALTERNATIVO-------------*/
+.header{
+	width:100%;
+	height:190px;
+	background-color: #FFFFFF;
+  position:fixed;
+  z-index:1000;
+  top:0px;
+  left:0px;
+  right:0px;
+}
+#header-top{
+	height:50px;
+	width:100%;
+	background-color: #49311C;
+}
+#header-bottom{
+	height:140px;
+	width:100%;
+}
+.menu{
+	width:100%;
+	height:130px;
+	padding:0;
+	display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+.menuitem{
+	padding: 0 1rem;
+	height: 130px;
+	color: #49311C;
+	font-size: 1rem;
+	font-weight: bold;
+	display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+	text-transform: uppercase;
+	transition: all .5s ease;
+}
+.menuitem:hover{
+	transform: translateY(-5px);
+	border-top: 5px solid #f7f7f9;
+}
+.menuitem a,
+.menuitem a:visited,
+.menuitem a:active,
+.menuitem a:focus{
+	color:#49311C;
+}
+
+.menuitem a:hover{
+	color: #FF4611;
+}
+#header-top .social{
+	height:50px !important;
+	display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2rem;
+}
+#header-top .social i{
+	color:#FFF;
+}
+/*----------------*/
 .top-header,
 .top-left,
 .header-logo,
@@ -241,10 +317,109 @@ menuitem a:focus{
 	color:#49311C;
 }
 /*-----------------------HOME------------------------*/
+/* Main alternativo*/
+#main2{
+	width:100%;
+	height: calc(100% - 190px);	
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 190px;
+
+}
+.slide-help{
+	background: url("../images/home.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.slides{
+	margin:0;
+	padding:0;
+	width:100%;
+	height: 100%;
+}
+.slide{
+	width:100%;
+	height: 100%;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.slide img{
+	width:100%;
+	height: 100%;	
+}
+.flex-direction-nav .flex-prev{
+	left: 10px;
+	display:none;
+}
+.flex-direction-nav .flex-next{
+	right: 10px;
+	display:none;
+}
+.flex-direction-nav a{
+	height:50px;
+	opacity: 0.5 !important;
+	display:none;
+}
+.flex-direction-nav a::before{
+	color: #FFFFFF;
+	opacity: 0.8;
+	display:none;
+}
+.flex-control-nav{
+	bottom:20px;
+	z-index:10;
+	display:none;
+}
+.flex-control-paging li a{
+	background: #FFFFFF;
+	opacity:0.5;
+	display:none;
+}
+.flex-control-paging li a.flex-active{
+	background: #FFFFFF;
+	opacity:1;
+	display:none;
+}
+.slide-content{
+	width:100%;
+	position:absolute;
+	top:50%;
+	left:50%;
+	opacity:1;
+	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.slide-title,
+.slide-description{
+	color: rgba(255,255,255,0.5);
+	line-height: normal;
+	margin:0;	
+	text-align: center;
+}
+.slide-title{
+	font-size: 8rem;
+}
+.slide-description{
+	font-size: 5rem;
+}
+.reservas2{
+	position: absolute;
+	z-index: 900;
+	margin:0 !important;
+	right: 5%;
+}
+/*----------------*/
 #main{
 	width:100%;
 	height: calc(100% - 160px);
-	background: url("../images/rio.jpg") no-repeat center center; 
+	background: url("../images/home.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -253,12 +428,14 @@ menuitem a:focus{
   flex-flow: row wrap;
   justify-content: flex-end;
   align-items: center;
+  margin-top: 160px;
 }
 .reservas{
 	background-color: rgba(0,0,0,0.5);
 	width:30%;
 	margin-right: 10%;
 	padding:0 2.5%;
+	display:none;
 }
 .reservas-title{
 	text-align: center;
@@ -316,10 +493,10 @@ menuitem a:focus{
 	background: url("../images/turismo.jpg") no-repeat center center; 
 }
 .spa{
-	background: url("../images/spa.jpg") no-repeat center center; 
+	background: url("../images/vapor.jpg") no-repeat center center; 
 }
 .restaurant{
-	background: url("../images/restaurante.jpg") no-repeat center center; 
+	background: url("../images/Comedor 02.jpg") no-repeat center center; 
 }
 .events{
 	background: url("../images/eventos.jpg") no-repeat center center; 
@@ -399,7 +576,8 @@ footer a:hover{
 	justify-content: center;
 	align-items: center;
 	padding: 0;
-	height:200px;
+	height:220px;
+	text-align: center;
 }
 .footer-top-right-center{
 	padding: 1rem 0;
@@ -414,7 +592,7 @@ footer a:hover{
 }
 .footer-content{
 	float:left;
-	width:77%;
+	width:100%;
 	padding: 0 5%;
 }
 .footer-content p{
@@ -477,8 +655,8 @@ footer a:hover{
 .footer-whatsapp,
 .footer-working_days,
 .footer-email{
-	margin-bottom:10px;
-	width:70%;
+	margin: 0.7rem 0;
+	width:100%;
 }
 /* Habitaciones */
 #reservas{
@@ -493,6 +671,14 @@ footer a:hover{
   flex-flow: row wrap;
   justify-content: flex-end;
   align-items: center;
+  margin-top: 160px;
+  display:none;
+}
+#servicios{
+	width:100%;
+	padding: 3rem 10% 3rem 10%;
+	background-color: #EFEFEF;
+	margin-top: 160px;
 }
 .servicio-title{
 	width:100%;
@@ -540,6 +726,7 @@ footer a:hover{
 	width: 100%;
 	padding: 3rem 10% 3rem 10%;
 	background-color: #EFEFEF;
+	margin-top: 160px;
 }
 .contact-top{
 	height:auto;
@@ -624,6 +811,13 @@ footer a:hover{
 	background-color: #FFFFFF;
 	float: left;
 	margin-right: 0.75rem;
+	
+}
+.gmaps-aux{
+	--margen: 0.75rem;
+	--ancho: calc(50% - (var(--margen)));
+	width: var(--ancho);
+	
 }
 .gmaps iframe{
 	width:100%;
@@ -710,6 +904,7 @@ footer a:hover{
 	width: 100%;
 	padding: 3rem 10% 2rem 10%;
 	background-color: #EFEFEF;
+	margin-top:160px;
 }
 .about-top,
 .about-middle,
@@ -829,6 +1024,7 @@ footer a:hover{
 #paquete{
 	width:100%;
 	padding: 3rem 10%;
+	margin-top: 160px;
 }
 .paquete{
 	width:100%;
@@ -921,6 +1117,7 @@ footer a:hover{
 #room{
 	width:100%;
 	padding: 3rem 10%;
+	margin-top: 160px
 }
 .room{
 	width:100%;
@@ -947,6 +1144,10 @@ footer a:hover{
 .list-room-services{
 	width:100%;
 	padding-bottom: 0.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 .room-description,
 .room-services{
@@ -997,6 +1198,7 @@ footer a:hover{
 	width:100%;
 	padding: 3rem 10%;
 	background-color: #EFEFEF;
+	margin-top: 160px;
 }
 .polivalente{
 	--margen: 0.75rem;
@@ -1022,4 +1224,19 @@ footer a:hover{
 	margin-bottom: 1.5rem;
 	padding: 2rem 5%;
 	background-color: #FFFFFF;
+}
+/*----------------------SPA---------------*/
+.vapor{
+	--margen: 0.75rem;
+	--ancho: calc(60% - (var(--margen)));
+	width: var(--ancho);
+	float:left;
+	margin-right: 0.75rem;
+	background-color: #FFFFFF;
+	background: url("../images/vapor.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:500px;
 }
