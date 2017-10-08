@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/ie.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -43,100 +44,101 @@
 	</header>
 	<section id="reservas">
 		<div class="reservas">
-			<h4 class="reservas-title">Reservas</h4>
-			<div class="reserva-line group">
-				<div class="reserva-left">
-					<label class="lbl-reserva">Entrada</label>
-					<input class="reserva-input" type="date">
+				<h4 class="reservas-title">Reservas</h4>
+				<div class="reserva-line group">
+					<div class="reserva-left">
+						<label class="lbl-reserva">Entrada</label>
+						<input class="reserva-input" type="date">
+					</div>
+					<div class="reserva-right">
+						<label class="lbl-reserva">Salida</label>
+						<input class="reserva-input" type="date">
+					</div>
 				</div>
-				<div class="reserva-right">
-					<label class="lbl-reserva">Salida</label>
-					<input class="reserva-input" type="date">
+				<div class="reserva-line group">
+					<div class="reserva-left">
+						<label class="lbl-reserva">Habitaciones</label>
+						<input class="reserva-input" type="number" min="0">
+					</div>
+					<div class="reserva-right">
+						<label class="lbl-reserva">Huespedes</label>
+						<input class="reserva-input" type="number" min="0">
+					</div>
 				</div>
-			</div>
-			<div class="reserva-line group">
-				<div class="reserva-left">
-					<label class="lbl-reserva">Habitaciones</label>
-					<input class="reserva-input" type="number" min="0">
-				</div>
-				<div class="reserva-right">
-					<label class="lbl-reserva">Huespedes</label>
-					<input class="reserva-input" type="number" min="0">
-				</div>
-			</div>
-			<div class="reserva-line group">
-				<input class="submit-reserva" type="submit" value="Realiza la Reserva">
-			</div>		
-		</div>
+				<div class="reserva-line group">
+					<input class="submit-reserva" type="submit" value="Realiza la Reserva">
+				</div>		
 	</section>
 	<section id="servicios">
-		<div class="servicio-title">
-			<h1>Restaurant</h1>
+		<div class="page-content">
+			<div class="servicio-title">
+				<h1>Restaurant</h1>
+			</div>
+			<div class="servicio-description">
+				<p>
+					En nuestro restaurante ofrecemos los más exquisitos platos de la cocina regional, peruana y extranjera, a cargo de experimentados conocedores del arte culinario. También podrá disfrutar de tragos nacionales y tragos regionales acompañado de excelente música, y de una vista impresionante del verdor de la naturaleza y el suave pasar del Huallaga.
+				</p>
+			</div>
+			<div class="servicios-list">
+				<div class="servicio">
+					<div class="servicio-thumb">
+						<img src="images/juane.jpg" />
+					</div>
+					<div class="servicio-button">
+						<a href="#">Carne</a>
+					</div>
+				</div>
+				<div class="servicio">
+					<div class="servicio-thumb">
+						<img src="images/tacachocecina.jpg" />
+					</div>
+					<div class="servicio-button">
+						<a href="#">Tacacho con Cecina y Chorizo</a>
+					</div>
+				</div>
+				<div class="servicio">
+					<div class="servicio-thumb">
+						<img src="images/filetepescado.jpg" />
+					</div>
+					<div class="servicio-button">
+						<a href="#">Filete de Pescado en salsa Rio Huallaga</a>
+					</div>
+				</div>
+				<div class="servicio">
+					<div class="servicio-thumb">
+						<img src="images/Cerdo a la BBQ.jpg" />
+					</div>
+					<div class="servicio-button">
+						<a href="#">Cerdo a la BBQ</a>
+					</div>
+				</div>
+				<div class="servicio">
+					<div class="servicio-thumb">
+						<img src="images/paiche a la plancha.jpg" />
+					</div>
+					<div class="servicio-button">
+						<a href="#">Paiche a la planca</a>
+					</div>
+				</div>
+				<div class="servicio">
+					<div class="servicio-thumb">
+						<img src="images/pescado a la chorrillana.jpg" />
+					</div>
+					<div class="servicio-button">
+						<a href="#">Pescado a la chorrillana</a>
+					</div>
+				</div>
+				<div class="servicio">
+					<div class="servicio-thumb">
+						<img src="images/trio amazonico.jpg" />
+					</div>
+					<div class="servicio-button">
+						<a href="#">Trío Amazónico</a>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="servicio-description">
-			<p>
-				En nuestro restaurante ofrecemos los más exquisitos platos de la cocina regional, peruana y extranjera, a cargo de experimentados conocedores del arte culinario. También podrá disfrutar de tragos nacionales y tragos regionales acompañado de excelente música, y de una vista impresionante del verdor de la naturaleza y el suave pasar del Huallaga.
-			</p>
-		</div>
-		<div class="servicios-list">
-			<div class="servicio">
-				<div class="servicio-thumb">
-					<img src="images/juane.jpg" />
-				</div>
-				<div class="servicio-button">
-					<a href="#">Carne</a>
-				</div>
-			</div>
-			<div class="servicio">
-				<div class="servicio-thumb">
-					<img src="images/tacachocecina.jpg" />
-				</div>
-				<div class="servicio-button">
-					<a href="#">Tacacho con Cecina y Chorizo</a>
-				</div>
-			</div>
-			<div class="servicio">
-				<div class="servicio-thumb">
-					<img src="images/filetepescado.jpg" />
-				</div>
-				<div class="servicio-button">
-					<a href="#">Filete de Pescado en salsa Rio Huallaga</a>
-				</div>
-			</div>
-			<div class="servicio">
-				<div class="servicio-thumb">
-					<img src="images/Cerdo a la BBQ.jpg" />
-				</div>
-				<div class="servicio-button">
-					<a href="#">Cerdo a la BBQ</a>
-				</div>
-			</div>
-			<div class="servicio">
-				<div class="servicio-thumb">
-					<img src="images/paiche a la plancha.jpg" />
-				</div>
-				<div class="servicio-button">
-					<a href="#">Paiche a la planca</a>
-				</div>
-			</div>
-			<div class="servicio">
-				<div class="servicio-thumb">
-					<img src="images/pescado a la chorrillana.jpg" />
-				</div>
-				<div class="servicio-button">
-					<a href="#">Pescado a la chorrillana</a>
-				</div>
-			</div>
-			<div class="servicio">
-				<div class="servicio-thumb">
-					<img src="images/trio amazonico.jpg" />
-				</div>
-				<div class="servicio-button">
-					<a href="#">Trío Amazónico</a>
-				</div>
-			</div>
-		</div>
-	</services>
+	</section>
 	<footer class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="footer-top col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 			<div class="footer-top-left col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">

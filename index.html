@@ -19,18 +19,16 @@
   <![endif]-->
 </head>
 <body>
-	<header>
+	<header class="group">
 		<div class='top-header'>
-			<div class="row no-margin">
-				<div class="top-left col-xl-4 col-lg-4 col-md-4 col-12 hide-responsive">
-				</div>
-				<div class="header-logo col-xl-4 col-lg-4 col-md-4 col-12">
-					<a href="index.html"><img id="logo-header" src="images/logo horizontal.png"></a>
-				</div>
-				<div class="social col-xl-4 col-lg-4 col-md-4 col-12">
-					<a href="https://www.facebook.com/HotelRioHuallagaOficial" target="_blank"><i class="fa fa-facebook-square fa-2x sn_icons" aria-hidden="true"></i></a>
-					<a href="#" target="_blank"><i class="fa fa-tripadvisor  fa-2x sn_icons" aria-hidden="true"></i></a>
-				</div>
+			<div class="top-left hide-responsive">
+			</div>
+			<div class="header-logo">
+				<a href="index.html"><img id="logo-header" src="images/logo horizontal.png"></a>
+			</div>
+			<div class="social">
+				<a href="https://www.facebook.com/HotelRioHuallagaOficial" target="_blank"><i class="fa fa-facebook-square fa-2x sn_icons" aria-hidden="true"></i></a>
+				<a href="#" target="_blank"><i class="fa fa-tripadvisor  fa-2x sn_icons" aria-hidden="true"></i></a>
 			</div>
 		</div>
 		<menu>
@@ -42,7 +40,21 @@
 			<menuitem><a href="turismo.html">Tours</a></menuitem>
 			<menuitem><a href="contact.html">Contacto</a></menuitem>
 		</menu>
+		<div class="togglemenu">
+      <a class="togglebar" href="#" title="Menu"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+    </div>	
 	</header>
+	<div class="responsive-menu">
+    <menu>
+			<menuitem><a href="aboutus.html">Nosotros</a></menuitem>
+			<menuitem><a href="rooms.html">Habitaciones</a></menuitem>
+			<menuitem><a href="spa.html">Spa</a></menuitem>
+			<menuitem><a href="restaurant.html">Restaurante</a></menuitem>
+			<menuitem><a href="events.html">Eventos</a></menuitem>
+			<menuitem><a href="turismo.html">Tours</a></menuitem>
+			<menuitem><a href="contact.html">Contacto</a></menuitem>
+		</menu>
+  </div>	
 	<section id="main">
 		<ul class="slides">
       <li class="slide" style="background:url('images/home.jpg') no-repeat center center; background-size:cover;"></li>
@@ -178,9 +190,9 @@
 				</div>		
 			</div>	
 	</footer>
-  <script src="js/scripts.js"></script>
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/scripts.js"></script>
 <script type="text/javascript">
   $(window).ready(function(){
     $('#main').flexslider({
